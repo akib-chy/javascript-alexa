@@ -33,6 +33,12 @@ recognition.onresult = (event) => {
     synts.speak(utter);
     p.innerText = "Assalamualikum, Hello";
     outpote.appendChild(p);
+  } else if (transcript === "hello akib") {
+    recognition.stop();
+    utter.text = "Yes, Sir Tell Me";
+    synts.speak(utter);
+    p.innerText = "Yes, Sir Tell Me";
+    outpote.appendChild(p);
   } else if (transcript === "hello") {
     recognition.stop();
     utter.text = "Assalamualikum, Hi";
@@ -43,9 +49,9 @@ recognition.onresult = (event) => {
     recognition.stop();
     utter.text = "Alhamdulillah I Am Fine, And You";
     synts.speak(utter);
-    p.innerText = "Alhamdulillah I Am Fine, And You";
+    p.innerText = "Alhamdulillah, I Am Fine, And You";
     outpote.appendChild(p);
-  } else if (transcript === "alhamdulillah fine") {
+  } else if (transcript === "fine") {
     recognition.stop();
     utter.text = "Oh Good";
     synts.speak(utter);
@@ -65,9 +71,15 @@ recognition.onresult = (event) => {
     outpote.appendChild(p);
   } else if (transcript === "what is your name") {
     recognition.stop();
-    utter.text = "My name Is Minhajul Alam Akib";
+    utter.text = "My name Is Minhazul Alam Akib";
     synts.speak(utter);
-    p.innerText = "My name Is Minhajul Alam Akib";
+    p.innerText = "My name Is Minhazul Alam Akib";
+    outpote.appendChild(p);
+  } else if (transcript === "are you robot") {
+    recognition.stop();
+    utter.text = "Yes, I Am A Meshinary Robot";
+    synts.speak(utter);
+    p.innerText = "Yes, I Am A Meshinary Robot";
     outpote.appendChild(p);
   } else if (transcript === "goodbye") {
     recognition.stop();
